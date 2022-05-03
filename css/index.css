@@ -222,7 +222,12 @@ font-family: 'Rubik Glitch', cursive !important;
 		text-align: center;
 		margin: auto;
 	}
-
+	#menu-btn {
+		display: block;
+	}
+	#close-btn {
+		display: none;
+	}
 	.nav__items {
 		position: fixed;
 		top: 3.8rem;
@@ -234,7 +239,7 @@ font-family: 'Rubik Glitch', cursive !important;
 		flex-direction: column;
 		gap: 0;
 		z-index: 3;
-		display: block;
+		display: none;
 		padding: 0;
 	}
 
