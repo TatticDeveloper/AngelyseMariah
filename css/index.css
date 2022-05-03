@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100&family=Sansita+Swashed:wght@300;400;500;600;800;900&display=swap');
 
 :root {
+	--color-pink: #ff75ba;
+	--color-hover: #ffb9dc;
     --color-white: #fff;
     --container-width: 84%;
-    --container-width-tablet: 90%;
+    --container-width-tablet: 60%;
     --container-width-phone: 94%;
 }
 
@@ -11,6 +13,7 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-family: 'Sansita Swashed', cursive;
+	background: linear-gradient(var(--color-pink), #e591ad) fixed 10%;
 }
 
 /* Top Classes */
@@ -24,7 +27,12 @@ nav {
     top: 0;
     left: 0;
     z-index: 2;
-    background: var(--color-white);
+    background: #ffffff10;
+	font-size: 20px;
+}
+
+a {
+	color: #fff;
 }
 
 header {
@@ -32,6 +40,9 @@ header {
 }
 
 /* Classes */
+.content {
+
+}
 .nav__container {
     display: flex;
     justify-content: space-between;
@@ -39,18 +50,64 @@ header {
 }
 .nav__items {
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
+}
+.nav__items li {
+	list-style-type: none;
+}
+.nav__items li a {
+	font-size: 24px;
+	font-weight: 200;
+	display: inline-block;
+	text-decoration: none;
+	
+}
+
+.nav__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+  
+
+.nav__items li a:hover {
+	animation: .8s shake infinite alternate;
+}
+
+.social-links {
+	display: none;
+}
+
+@keyframes shake {
+	0% { transform: skewX(-25deg); }
+	5% { transform: skewX(35deg); }
+	10% { transform: skewX(-15deg); }
+	15% { transform: skewX(15deg); }
+	20% { transform: skewX(0deg); }
+	100% { transform: skewX(0deg); }  
+  }
+
+.hover-effect-item {
+	transition: 0.3s;
+}
+.hover-effect-item:hover{
+	color: var(--color-hover);
 }
 .nav__logo {
     position: absolute;
     top: 50%;
     left: 50%;
+	margin-left: 3rem;
     transform: translate(-50%, -50%);
+	color: #ffffff;
+	text-decoration: none;
+ 
 }
 .nav__left {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
+	 
 }
 .nav button {
 	display: none;
@@ -60,23 +117,23 @@ header {
     margin: 0 auto;
 }
 
+#menu-btn {
+		display: none;
+}
+
+@media screen and (max-width: 1650px) {
+	.nav__logo {
+		font-size: 16px;
+	}
+	
+}
+
 /* ================== MEDIA QUERIES (TABLETS) ====================== */
 @media screen and (max-width: 1024px) {
 	.container {
 		width: var(--container-width-tablet);
 	}
 
-	.h1 {
-		font-size: 4.2rem;
-	}
-
-	.h2 {
-		font-size: 2rem;
-	}
-
-	.h3 {
-		font-size: 1.9rem;
-	}
 
 	.m-bottom-20 {
 		margin-bottom: 0rem;
@@ -89,13 +146,16 @@ header {
 	}
 
 	.nav__logo {
+		font-size: 19px;
 		margin-left: 2rem;
 		position: relative;
+		text-align: center;
+		margin: auto;
 	}
 
 	.nav__items {
 		position: fixed;
-		top: 5rem;
+		top: 3.8rem;
 		right: 0;
 		background: var(--color-white);
 		height: max-content;
@@ -105,6 +165,7 @@ header {
 		gap: 0;
 		z-index: 3;
 		display: block;
+		padding: 0;
 	}
 
 	.nav__items li {
@@ -124,7 +185,7 @@ header {
 	}
 
 	.nav__items li a:hover {
-		background: var(--color-primary);
+		background: var(--color-pink);
 		color: var(--color-white);
 	}
 	.nav__signin_signup {
@@ -144,6 +205,7 @@ header {
 		background: transparent;
 		color: var(--color-primary);
 		cursor: pointer;
+		border: none;
 	}
 
 	.nav button#close_btn {
@@ -152,31 +214,35 @@ header {
 
 	.nav button i {
 		font-size: 2.4rem;
+		color: #fff;
+		 
+	}
+	.social-links {
+		display: block;
+		text-align: center;
+		padding: 10px;
+	}
+	.social-links a {
+		color: #000;
+		font-size: 30px;
+		margin: 5px;
+	}
+	.nav__left {
+		display: none;
 	}
 }
 
 /* ===================== MEDIA QUERIES (PHONES) ==================== */
 @media screen and (max-width: 600px) {
-	html {
-		font-size: 14px;
-	}
-
-	.h1 {
-		font-size: 3rem !important; 
-	}
-
-	.h2 {
-		font-size: 1.8rem;
-	}
-
-	.h3 {
-		font-size: 1.4rem;
-	}
-
+ 
  
 	/* ============== NAVBAR ================= */
 	.nav__logo {
 		margin-left: 1rem;
+	}
+
+	.nav__left {
+		display: none;
 	}
 
 	.nav__items li a {
@@ -187,6 +253,14 @@ header {
 	.nav button {
 		margin-right: 0.7rem;
 	}
+	.social-links a {
+		color: #000;
+		font-size: 25px;
+		margin: 5px;
+	}
 }
 
- 
+#menu-btn {
+	color: var(--color-white);
+	border: 0px solid;
+}
