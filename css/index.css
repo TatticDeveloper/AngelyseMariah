@@ -19,6 +19,7 @@ body {
 }
 
 /* Top Classes */
+ 
 
 nav {
     width: 100vw;
@@ -72,6 +73,49 @@ iframe {
 	border-radius: 50px;
 	 
 }
+
+
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+	display: block; 
+}
+.gallery__item--1 {
+	grid-area: 3 / 1 / 6 / 2;
+}
+.gallery__item--2 {
+	grid-area: 1 / 3 / 3 / 4;
+}
+.gallery__item--3 {
+	grid-area: 3 / 2 / 6 / 3;  
+}
+.gallery__item--4 {
+	grid-area: 3 / 5 / 6 / 6;
+}
+.gallery__item--5 {
+	grid-area: 1 / 1 / 3 / 2;
+}
+.gallery__item--6 {
+	grid-area: 1 / 5 / 3 / 6;
+}
+.gallery__item--7 {
+	grid-area: 3 / 3 / 6 / 5;
+}
+.gallery__item--8 {
+	grid-area: 1 / 4 / 3 / 5;
+}
+.gallery__item--9 {
+	grid-area: 1 / 2 / 3 / 3;
+}
+
 .first-block {
 	background-color: #ffffff3f;
 	width: 80%;
@@ -195,6 +239,8 @@ font-family: 'Rubik Glitch', cursive !important;
 /* ================== MEDIA QUERIES (TABLETS) ====================== */
  
 @media screen and (max-width: 1024px) {
+
+
 	.first-block-container h1 {
 		font-size: 54px !important;
 	}
@@ -309,6 +355,54 @@ font-family: 'Rubik Glitch', cursive !important;
 }
 
 /* ===================== MEDIA QUERIES (PHONES) ==================== */
+@media screen and (max-width: 900px) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+	.gallery__img {
+		width: 90%;
+		height: 100%;
+		object-fit: cover;
+		display: block; 
+		box-shadow: none !important;
+	}
+	.gallery__item--1 {
+		grid-area: none;
+	}
+	.gallery__item--2 {
+		grid-area: none;
+	}
+	.gallery__item--3 {
+		grid-area: none;
+	}
+	.gallery__item--4 {
+		grid-area: none;
+	}
+	.gallery__item--5 {
+		grid-area: none;
+	}
+	.gallery__item--6 {
+		grid-area: none;
+	}
+	.gallery__item--7 {
+		grid-area: none;
+	}
+	.gallery__item--8 {
+		grid-area: none;
+	}
+	.gallery__item--9 {
+		grid-area: none;
+	}
+
+	.gallery-size {
+		width: 100% !important;
+	}
+	
+}
 @media screen and (max-width: 720px) {
 	.first-block-container h1 {
 		font-size: 44px !important;
@@ -404,6 +498,7 @@ font-family: 'Rubik Glitch', cursive !important;
 	}
 }
 @media screen and (max-width: 600px) {
+	 
 	.first-block {
 		width: 40%;
 		box-shadow: none;
