@@ -71,7 +71,7 @@ header {
   
 
 .nav__items li a:hover {
-	animation: .8s shake infinite alternate;
+	animation: .3s shake infinite alternate;
 }
 
 .social-links {
@@ -124,6 +124,7 @@ header {
 @media screen and (max-width: 1650px) {
 	.nav__logo {
 		font-size: 16px;
+		transform: translate(-30%, -50%);
 	}
 	
 }
