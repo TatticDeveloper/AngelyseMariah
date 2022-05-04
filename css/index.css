@@ -115,7 +115,16 @@ iframe {
 .gallery__item--9 {
 	grid-area: 1 / 2 / 3 / 3;
 }
-
+.social-links-section {
+	display: block;
+	text-align: center;
+	padding: 10px;
+}
+.social-links-section a {
+	color: var(--color-white);
+	font-size: 30px !important;
+	margin: 5px;
+}
 .first-block {
 	background-color: rgba(0, 0, 0, 0.534);
 	width: 80%;
@@ -174,6 +183,7 @@ font-family: 'Rubik Glitch', cursive !important;
 .social-links {
 	display: none;
 }
+ 
 
 @keyframes shake {
 	0% { transform: skewX(-25deg); }
@@ -195,7 +205,7 @@ font-family: 'Rubik Glitch', cursive !important;
     top: 50%;
     left: 50%;
 	margin-left: 3rem;
-    transform: translate(-50%, -50%);
+    transform: translate(-70%, -50%);
 	color: #ffffff;
 	text-decoration: none;
  
@@ -221,7 +231,7 @@ font-family: 'Rubik Glitch', cursive !important;
 @media screen and (max-width: 1650px) {
 	.nav__logo {
 		font-size: 16px;
-		transform: translate(-30%, -50%);
+		transform: translate(-70%, -50%);
 	}
 	
 }
@@ -347,6 +357,16 @@ font-family: 'Rubik Glitch', cursive !important;
 	.social-links a {
 		color: #000;
 		font-size: 30px;
+		margin: 5px;
+	}
+	.social-links-section {
+		display: block;
+		text-align: center;
+		padding: 10px;
+	}
+	.social-links-section a {
+		color: var(--color-white);
+		font-size: 30px !important;
 		margin: 5px;
 	}
 	.nav__left {
@@ -540,6 +560,11 @@ font-family: 'Rubik Glitch', cursive !important;
 	.social-links a {
 		color: #000;
 		font-size: 25px;
+		margin: 5px;
+	}
+	.social-links-section a {
+		color: var(--color-white);
+		font-size: 25px !important;
 		margin: 5px;
 	}
 }
